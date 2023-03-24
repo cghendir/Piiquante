@@ -1,0 +1,18 @@
+import mongoose from 'mongoose'
+import uniqueValidator from 'mongoose-unique-validator'
+
+
+mongoose.set('strictQuery', false)
+
+const userSchema = mongoose.Schema({
+    email: { type: String, required: true, unique: true },
+    password: { type: String, required: true }
+})
+
+userSchema.plugin(uniqueValidator)
+
+
+
+const User = mongoose.model('User', userSchema)
+
+export default User
