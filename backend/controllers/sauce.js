@@ -160,7 +160,7 @@ const modifySauce = async (req, res, next) => {
 
 
 /**
- * Permet de vérifier si une sauce existe, si l'uti
+ * Permet de vérifier si la sauce existe et de mettre ou de retirer un like ou un disliker que l'utilisateur aura mis
  * @param {object} req 
  * @param {string} res 
  * @param {*} next 
