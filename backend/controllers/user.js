@@ -6,9 +6,9 @@ import jwt from 'jsonwebtoken'
 
 /**
  * Permet à un utilisateur de crée un compte avec un e-mail et un mot de passe cripté 
- * @param {Object} req 
- * @param {String} res 
- * @param {*} next 
+ * @param {Express.Request} req 
+ * @param {Express.Response} res 
+ * @param {Express.NextFunction} next
  * @returns {Promise}
  */
 
@@ -50,9 +50,9 @@ const signUp = [
 
 /**
  * Permet à un utilisateur de se connecter avec son e-mail et son mot de passe
- * @param {Object} req 
- * @param {String} res 
- * @param {*} next 
+ * @param {Express.Request} req 
+ * @param {Express.Response} res 
+ * @param {Express.NextFunction} next
  * @returns {Promise}
  */
 

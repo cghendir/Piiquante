@@ -3,7 +3,7 @@ import fs from "fs"
 
 /**
  * Permet de remplacer l'ancienne image par la nouvelle que l'utilisateur aura chargé
- * @param {*} file 
+ * @param {string} file 
  */
 const deleteImage = (file) => {
     try {
@@ -14,9 +14,9 @@ const deleteImage = (file) => {
 
 /**
  * Permet de récupérer toute les sauces du serveur
- * @param {object} req 
- * @param {string} res 
- * @param {*} next 
+ * @param {Express.Request} req 
+ * @param {Express.Response} res 
+ * @param {Express.NextFunction} next 
  * @returns {Promise<Object[]>}
  */
 const findSauce = async (req, res, next) => {
@@ -31,9 +31,9 @@ const findSauce = async (req, res, next) => {
 
 /**
  * Permet de récupérer une sauce par son Id
- * @param {object} req 
- * @param {string} res 
- * @param {*} next 
+ * @param {Express.Request} req 
+ * @param {Express.Response} res 
+ * @param {Express.NextFunction} next
  * @returns {Promise<Object>}
  */
 const findSauceById = async (req, res, next) => {
@@ -48,10 +48,10 @@ const findSauceById = async (req, res, next) => {
 
 /**
  * Permet de créer un sauce
- * @param {object} req 
- * @param {string} res 
- * @param {*} next 
- * @returns {Promise}
+ * @param {Express.Request} req 
+ * @param {Express.Response} res 
+ * @param {Express.NextFunction} next
+ * @returns {Promise<Object[]>}
  */
 const createSauce = async (req, res, next) => {
     try {
@@ -82,10 +82,10 @@ const createSauce = async (req, res, next) => {
 
 /**
  * Permet de supprimer une sauce
- * @param {object} req 
- * @param {string} res 
- * @param {*} next 
- * @returns {Promise}
+ * @param {Express.Request} req 
+ * @param {Express.Response} res 
+ * @param {Express.NextFunction} next
+ * @returns {Promise<Object>}
  */
 const deleteSauce = async (req, res, next) => {
     try {
@@ -112,11 +112,11 @@ const deleteSauce = async (req, res, next) => {
 
 
 /**
- * Permet de vérifier si une sauce existe et si elle appartient à l'utilisateur et sitout est correct de la modifier
- * @param {object} req 
- * @param {string} res 
- * @param {*} next 
- * @returns {Promise}
+ * Permet de vérifier si une sauce existe et si elle appartient à l'utilisateur et si tout est correct de la modifier
+ * @param {Express.Request} req 
+ * @param {Express.Response} res 
+ * @param {Express.NextFunction} next
+ * @returns {Promise<Object>}
  */
 const modifySauce = async (req, res, next) => {
 
@@ -161,10 +161,10 @@ const modifySauce = async (req, res, next) => {
 
 /**
  * Permet de vérifier si la sauce existe et de mettre ou de retirer un like ou un disliker que l'utilisateur aura mis
- * @param {object} req 
- * @param {string} res 
- * @param {*} next 
- * @returns {Promise}
+ *@param {Express.Request} req 
+ * @param {Express.Response} res 
+ * @param {Express.NextFunction} next
+ * @returns {Promise<Object>}
  */
 const sauceLiked = async (req, res, next) => {
     try {

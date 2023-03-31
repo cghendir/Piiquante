@@ -4,9 +4,9 @@ import User from '../models/User.js'
 
 /**
  * Authentifie toutes les requêtes des utilisateurs
- * @param {object} req 
- * @param {string} res 
- * @param {Function} next 
+ * @param {Express.Request} req 
+ * @param {Express.Response} res 
+ * @param {Express.NextFunction} next
  * @returns {Promise}
  */
 
